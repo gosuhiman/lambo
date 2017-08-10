@@ -1,0 +1,25 @@
+<div class="responsive-container">
+  <div class="coins">
+    <h2>Currencies</h2>
+    <div class="coin-list">
+      <app-coin-badge
+        *ngFor="let coin of coins"
+        [coin]="coin"
+      ></app-coin-badge>
+    </div>
+  </div>
+  <div class="my-coins">
+    <h2>My Wallet</h2>
+    <div class="my-coin-list">
+      <app-my-coin-badge
+        *ngFor="let myCoin of myCoins"
+        [myCoin]="myCoin"
+      ></app-my-coin-badge>
+    </div>
+  </div>
+  <div class="totals">
+    <div class="total"><i class="fa fa-usd"></i> {{totals.usd}}</div>
+    <div class="total"><i class="fa fa-btc"></i> {{totals.btc}}</div>
+    <div class="total">PLN {{totals.pln}}</div>
+  </div>
+</div>

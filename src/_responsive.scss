@@ -1,0 +1,244 @@
+@import "vars";
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+.responsive-container {
+  width: 90%;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-sm) {
+    width: 540px;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    width: 680px;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 960px;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    width: 1140px;
+  }
+}
+
+.responsive-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin grid-1() {
+  width: 100%;
+  margin-right: 0;
+}
+
+@mixin grid-2() {
+  width: 48%;
+  margin-right: 4%;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@mixin grid-3() {
+  width: 30%;
+  margin-right: 5%;
+
+  &:nth-child(2n) {
+    margin-right: 5%;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@mixin grid-4() {
+  width: 21%;
+  margin-right: 5%;
+
+  &:nth-child(2n) {
+    margin-right: 5%;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 5%;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+@mixin grid-5() {
+  width: 19%;
+  margin-right: 1.25%;
+
+  &:nth-child(2n) {
+    margin-right: 1.25%;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 1.25%;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 1.25%;
+  }
+
+  &:nth-child(5n) {
+    margin-right: 0;
+  }
+}
+
+@mixin grid-6() {
+  width: 15.5%;
+  margin-right: 1.165%;
+
+  &:nth-child(2n) {
+    margin-right: 1.165%;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 1.165%;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 1.165%;
+  }
+
+  &:nth-child(5n) {
+    margin-right: 1.165%;
+  }
+
+  &:nth-child(6n) {
+    margin-right: 0;
+  }
+}
+
+.xs-1 {
+  > * {
+    @include grid-1;
+  }
+}
+
+.xs-2 {
+  > * {
+    @include grid-2;
+  }
+}
+
+.sm-1 {
+  > * {
+    @include grid-1;
+  }
+}
+
+.md-2 {
+  > * {
+    @media (min-width: $breakpoint-md) {
+      @include grid-2;
+    }
+  }
+}
+
+.md-3 {
+  > * {
+    @media (min-width: $breakpoint-md) {
+      @include grid-3;
+    }
+  }
+}
+
+.md-4 {
+  > * {
+    @media (min-width: $breakpoint-md) {
+      @include grid-4;
+    }
+  }
+}
+
+.lg-2 {
+  > * {
+    @media (min-width: $breakpoint-lg) {
+      @include grid-2;
+    }
+  }
+}
+
+.lg-3 {
+  > * {
+    @media (min-width: $breakpoint-lg) {
+      @include grid-3;
+    }
+  }
+}
+
+.lg-4 {
+  > * {
+    @media (min-width: $breakpoint-lg) {
+      @include grid-4;
+    }
+  }
+}
+
+.lg-5 {
+  > * {
+    @media (min-width: $breakpoint-lg) {
+      @include grid-5;
+    }
+  }
+}
+
+.lg-6 {
+  > * {
+    @media (min-width: $breakpoint-lg) {
+      @include grid-6;
+    }
+  }
+}
+
+.xl-2 {
+  > * {
+    @media (min-width: $breakpoint-xl) {
+      @include grid-2;
+    }
+  }
+}
+
+.xl-3 {
+  > * {
+    @media (min-width: $breakpoint-xl) {
+      @include grid-3;
+    }
+  }
+}
+
+.xl-4 {
+  > * {
+    @media (min-width: $breakpoint-xl) {
+      @include grid-4;
+    }
+  }
+}
+
+.xl-5 {
+  > * {
+    @media (min-width: $breakpoint-xl) {
+      @include grid-5;
+    }
+  }
+}
+
+.xl-6 {
+  > * {
+    @media (min-width: $breakpoint-xl) {
+      @include grid-6;
+    }
+  }
+}

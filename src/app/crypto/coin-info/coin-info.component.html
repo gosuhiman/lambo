@@ -18,8 +18,14 @@
     </div>
   </div>
   <div class="totals">
-    <div class="total"><i class="fa fa-usd"></i> {{totals.usd}}</div>
-    <div class="total"><i class="fa fa-btc"></i> {{totals.btc}}</div>
-    <div class="total">PLN {{totals.pln}}</div>
+    <h2>Lambo fund</h2>
+    <div class="total-list">
+      <div class="total"><i class="fa fa-usd"></i> {{totals.usd | number : '1.2-2'}}</div>
+      <div class="total"><i class="fa fa-btc"></i> {{totals.btc | number : '1.6-6'}}</div>
+      <div class="total">PLN {{totals.pln | number : '1.2-2'}}</div>
+    </div>
   </div>
+</div>
+<div class="refresh" (click)="onRefreshClick();">
+  <i class="fa fa-refresh"></i>
 </div>

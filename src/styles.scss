@@ -3,5 +3,15 @@
 
 body {
   font-family: 'Asap Condensed', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
+  color: $primary-text-color;
+  background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 26px;
 }

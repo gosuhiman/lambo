@@ -23,6 +23,10 @@ export class CoinmarketcapService {
   }
 
   public refresh() {
+    let totals = new Totals();
+    this.coins$.next([]);
+    this.myCoins$.next([]);
+
     this._getMyCoins()
       .subscribe(myCoins => {
         this.myCoins$.next(myCoins);
@@ -36,9 +40,10 @@ export class CoinmarketcapService {
               this._fixerIoService.usdToPln$
                 .subscribe(usdToPln => {
                   myCoin.amountPln = myCoin.amountUsd * usdToPln;
-                  this.totals$.value.usd += myCoin.amountUsd;
-                  this.totals$.value.btc += myCoin.amountBtc;
-                  this.totals$.value.pln += myCoin.amountPln;
+                  totals.usd += myCoin.amountUsd;
+                  totals.btc += myCoin.amountBtc;
+                  totals.pln += myCoin.amountPln;
+                  this.totals$.next(totals);
                 });
             });
         });

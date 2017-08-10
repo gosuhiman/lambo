@@ -32,4 +32,8 @@ export class CoinInfoComponent implements OnInit {
       .subscribe(totals => this.totals = totals);
   }
 
+  onRefreshClick() {
+    this._coinMarketCapService.refresh();
+  }
+
 }

@@ -4,6 +4,15 @@
 
 }
 
+.refresh {
+  font-size: 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  color: $accent-color;
+}
+
 h2 {
 
 }
@@ -25,7 +34,15 @@ h2 {
 }
 
 .totals {
-  .total {
-    margin-bottom: 6px;
+  margin-bottom: 16px;
+
+  .total-list {
+    .total {
+      margin-bottom: 6px;
+      background: $accent-color;
+      color: $primary-color-text;
+      padding: 12px;
+      font-size: 26px;
+    }
   }
 }

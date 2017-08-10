@@ -1,0 +1,12 @@
+@import "../../../shared";
+
+:host {
+  padding: 12px;
+  background: $primary-color;
+  color: $primary-color-text;
+}
+
+.name {
+  font-size: 19px;
+  margin-bottom: 4px;
+}

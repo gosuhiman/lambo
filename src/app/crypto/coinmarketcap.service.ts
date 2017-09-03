@@ -48,6 +48,7 @@ export class CoinmarketcapService {
                       totals.usd += myCoin.amountUsd;
                       totals.btc += myCoin.amountBtc;
                       totals.pln += myCoin.amountPln;
+                      totals.calculateLamboPercent();
                       this.totals$.next(totals);
                       setTimeout(() => {
                         this._loaderService.disable();

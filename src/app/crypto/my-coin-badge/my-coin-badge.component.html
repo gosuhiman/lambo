@@ -1,4 +1,7 @@
 <div *ngIf="myCoin && myCoin.coin">
+  <div class="image">
+    <img src="{{myCoin.coin.imageUrl}}">
+  </div>
   <div class="name">{{myCoin.coin.name}}</div>
   <div>{{myCoin.amount}}</div>
   <div><i class="fa fa-usd"></i> {{myCoin.amountUsd | number : '1.2-2'}}</div>

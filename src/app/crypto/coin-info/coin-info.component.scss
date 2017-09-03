@@ -41,8 +41,20 @@ h2 {
       margin-bottom: 6px;
       background: $accent-color;
       color: $primary-color-text;
-      padding: 12px;
-      font-size: 26px;
+      padding: 8px 12px;
+      font-size: 21px;
+      display: flex;
+      align-items: baseline;
+
+      i {
+        margin-right: 6px;
+      }
+
+      img {
+        height: 24px;
+        margin-right: 16px;
+        align-self: center;
+      }
     }
   }
 }

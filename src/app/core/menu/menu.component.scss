@@ -1,0 +1,19 @@
+@import "../../../shared";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  background: $accent-color;
+  width: 140px;
+  padding: 8px;
+}
+
+a {
+  color: #fff;
+  padding: 2px;
+  margin-bottom: 4px;
+}

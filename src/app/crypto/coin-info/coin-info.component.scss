@@ -1,16 +1,15 @@
 @import "../../../shared";
 
 :host {
-
+  display: flex;
+  position: relative;
 }
 
-.refresh {
-  font-size: 30px;
-  position: fixed;
+.controls {
+  position: absolute;
   top: 0;
   right: 0;
   padding: 8px;
-  color: $accent-color;
 }
 
 h2 {

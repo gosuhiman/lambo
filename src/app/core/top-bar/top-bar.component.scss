@@ -1,0 +1,15 @@
+@import "../../../shared";
+
+:host {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 42px;
+  background: $accent-color;
+  padding: 4px;
+}
+
+button {
+  background: $accent-color;
+  color: #fff;
+}

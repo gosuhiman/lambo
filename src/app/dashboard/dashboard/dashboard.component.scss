@@ -1,4 +1,7 @@
 @import "../../../shared";
 
 :host {
+  flex: 1 0;
+  background: url('../../../assets/backgrounds/aventador-s-1.jpg') 50% 50% no-repeat;
+  background-size: cover;
 }

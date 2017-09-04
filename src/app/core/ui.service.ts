@@ -13,4 +13,8 @@ export class UiService {
     this.menuOpen$.next(!this.menuOpen$.value);
   }
 
+  menuClose() {
+    this.menuOpen$.next(false);
+  }
+
 }

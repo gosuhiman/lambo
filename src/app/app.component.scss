@@ -16,9 +16,9 @@
     display: flex;
     flex: 1 0;
     position: relative;
-
-    > * {
-      flex: 1 0;
-    }
   }
+}
+
+router-outlet {
+  position: absolute;
 }

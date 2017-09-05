@@ -2,14 +2,32 @@
 
 :host {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  height: 42px;
+  height: 56px;
   background: $accent-color;
-  padding: 4px;
+  padding: 0 8px;
 }
 
-button {
-  background: $accent-color;
-  color: #fff;
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0 none;
+
+  img {
+    height: 32px;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    background: $accent-color;
+    color: #fff;
+    font-size: 40px;
+  }
 }

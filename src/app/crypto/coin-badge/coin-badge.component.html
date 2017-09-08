@@ -2,5 +2,5 @@
   <img src="{{coin.imageUrl}}">
 </div>
 <div class="name">{{coin.name}}</div>
-<div><i class="fa fa-usd"></i> {{coin.price_usd}} ({{coin.percent_change_24h}}%)</div>
-<div><i class="fa fa-btc"></i> {{coin.price_btc}}</div>
+<div><i class="fa fa-usd"></i> {{coin.price_usd | number : '1.2-2'}} ({{coin.percent_change_24h}}%)</div>
+<div><i class="fa fa-btc"></i> {{coin.price_btc | number : '1.6-6'}}</div>

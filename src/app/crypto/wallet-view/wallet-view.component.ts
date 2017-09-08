@@ -1,29 +1,24 @@
-import {Component, OnInit} from '@angular/core';
-import {CoinmarketcapService} from "../coinmarketcap.service";
-import {Coin} from "../coin";
+import {Component} from '@angular/core';
+import {ViewComponent} from "../../core/view.component";
 import {MyCoin} from "../my-coin";
-
 import {Totals} from "../totals";
+import {CoinmarketcapService} from "../coinmarketcap.service";
 
 @Component({
-  selector: 'app-coin-info',
-  templateUrl: './coin-info.component.html',
-  styleUrls: ['./coin-info.component.scss']
+  selector: 'app-wallet-view',
+  templateUrl: './wallet-view.component.html',
+  styleUrls: ['./wallet-view.component.scss']
 })
-export class CoinInfoComponent implements OnInit {
+export class WalletViewComponent extends ViewComponent {
 
-  coins: Coin[];
   myCoins: MyCoin[];
   totals: Totals;
 
   constructor(private _coinMarketCapService: CoinmarketcapService) {
+    super();
   }
 
   ngOnInit() {
-    this._coinMarketCapService.coins$
-      .filter(coins => typeof coins != 'undefined')
-      .subscribe(coins => this.coins = coins);
-
     this._coinMarketCapService.myCoins$
       .filter(myCoins => typeof myCoins != 'undefined')
       .subscribe(myCoins => this.myCoins = myCoins);

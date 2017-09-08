@@ -1,10 +1,19 @@
 [
   {
     "id": "walton",
-    "amount": 226.75
+    "amount": 226.52
   },
   {
-    "id": "golem-network-tokens",
-    "amount": 1085.016
+    "id": "metal",
+    "amount": 15.79
+  },
+  {
+    "id": "neo",
+    "amount": 9.03
+  },
+  {
+    "id": "komodo",
+    "amount": 12.234
   }
 ]
+

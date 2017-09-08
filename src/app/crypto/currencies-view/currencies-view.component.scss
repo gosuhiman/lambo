@@ -1,0 +1,26 @@
+@import "../../../shared";
+
+:host {
+  display: flex;
+  position: relative;
+  flex: 1 0;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+}
+
+.coins {
+  margin-bottom: 16px;
+
+  .coin-list {
+    @extend .responsive-grid, .xs-2;
+
+    app-coin-badge {
+      margin-bottom: 16px;
+    }
+  }
+}

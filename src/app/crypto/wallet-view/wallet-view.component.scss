@@ -13,23 +13,15 @@
   padding: 8px;
 }
 
-h2 {
-
-}
-
-.coins {
-  margin-bottom: 16px;
-
-  .coin-list {
-    @extend .responsive-grid, .xs-2;
-  }
-}
-
 .my-coins {
   margin-bottom: 16px;
 
   .my-coin-list {
     @extend .responsive-grid, .xs-2;
+
+    app-my-coin-badge {
+      margin-bottom: 16px;
+    }
   }
 }
 

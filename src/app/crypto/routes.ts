@@ -1,9 +1,19 @@
 import {Routes} from "@angular/router";
-import {CoinInfoComponent} from "./coin-info/coin-info.component";
+import {CurrenciesViewComponent} from "./currencies-view/currencies-view.component";
+import {WalletViewComponent} from "./wallet-view/wallet-view.component";
+import {SettingsViewComponent} from "./settings-view/settings-view.component";
 
 export const routes: Routes = [
   {
-    path: 'coin-info',
-    component: CoinInfoComponent
+    path: 'wallet',
+    component: WalletViewComponent
+  },
+  {
+    path: 'currencies',
+    component: CurrenciesViewComponent
+  },
+  {
+    path: 'settings',
+    component: SettingsViewComponent
   }
 ];

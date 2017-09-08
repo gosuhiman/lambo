@@ -1,0 +1,14 @@
+<div class="responsive-container">
+  <div class="coins">
+    <h2>Currencies</h2>
+    <div class="coin-list">
+      <app-coin-badge
+        *ngFor="let coin of coins"
+        [coin]="coin"
+      ></app-coin-badge>
+    </div>
+  </div>
+</div>
+<div class="controls">
+  <button (click)="onRefreshClick();"><i class="fa fa-refresh"></i></button>
+</div>

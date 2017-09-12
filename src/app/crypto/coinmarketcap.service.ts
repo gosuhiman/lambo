@@ -9,6 +9,7 @@ import {MyCoin} from "./my-coin";
 import {FixerIoService} from "./fixer-io.service";
 import {Totals} from "./totals";
 import {LoaderService} from "../core/loader.service";
+import {BittrexService} from "../bittrex/bittrex.service";
 
 @Injectable()
 export class CoinmarketcapService {
@@ -21,6 +22,7 @@ export class CoinmarketcapService {
 
   constructor(private _http: Http,
               private _fixerIoService: FixerIoService,
+              private _bittrexService: BittrexService,
               private _loaderService: LoaderService) {
     this.refresh();
   }
@@ -74,6 +76,15 @@ export class CoinmarketcapService {
   }
 
   private _getMyCoins(): Observable<any[]> {
+
+    return this._bittrexService.getBalances()
+      .map(objs => {
+        let myCoins: MyCoin[] = [];
+        console.log(objs);
+        return myCoins;
+      });
+
+    /*
     return this._http.get(this.myCoinsUrl)
       .map(res => res.json())
       .map(objs => {
@@ -85,6 +96,7 @@ export class CoinmarketcapService {
         }
         return myCoins;
       });
+      */
   }
 
 }

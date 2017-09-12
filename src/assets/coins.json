@@ -1,19 +1,19 @@
 [
   {
-    "id": "walton",
-    "amount": 226.52
-  },
-  {
-    "id": "metal",
-    "amount": 15.79
+    "id": "bitcoin",
+    "amount": 0.05
   },
   {
     "id": "neo",
-    "amount": 9.03
+    "amount": 21.86
   },
   {
-    "id": "komodo",
-    "amount": 12.234
+    "id": "counterparty",
+    "amount": 11.55
+  },
+  {
+    "id": "gas",
+    "amount": 0.06
   }
 ]
 
